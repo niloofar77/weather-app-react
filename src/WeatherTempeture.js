@@ -10,30 +10,32 @@ export default function WeatherTempeture(props) {
     setUnit("celsius");
   }
   const [unit, setUnit] = useState("celsius");
-  if (unit === "celsius") {
-    return (
-      <div className="WeatherTempeture">
-        <span className="tempeture"> {Math.round(props.celsius)} </span>
-        <span className="unit">
-          c|
-          <a href="/" onClick={showFahrenheit}>
+  return (
+    <div className="WeatherTempeture">
+      <span className="tempeture"> {Math.round(props.celsius)} </span>
+      <span className="unit">
+        c
+        {/* <a href="/" onClick={showFahrenheit}>
             F
-          </a>
-        </span>
-      </div>
-    );
-  } else {
-    let fahrenheit = (props.celsius * 9) / 5 + 32;
-    return (
-      <div className="WeatherTempeture">
-        <span className="tempeture"> {Math.round(fahrenheit)} </span>
-        <span className="unit">
-          <a href="/" onClick={showCelsius}>
-            c|
-          </a>
-          F
-        </span>
-      </div>
-    );
-  }
+          </a> */}
+      </span>
+    </div>
+  );
+  // if (unit === "celsius") {
+
+  // }
+  // } else {
+  //   let fahrenheit = (props.celsius * 9) / 5 + 32;
+  //   return (
+  //     <div className="WeatherTempeture">
+  //       <span className="tempeture"> {Math.round(fahrenheit)} </span>
+  //       <span className="unit">
+  //         <a href="/" onClick={showCelsius}>
+  //           c|
+  //         </a>
+  //         F
+  //       </span>
+  //     </div>
+  //   );
+  // }
 }

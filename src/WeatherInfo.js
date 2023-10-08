@@ -8,7 +8,6 @@ export default function WeatherInfo(props) {
     <div className="WeatherInfo">
       <h1>{props.data.city}</h1>
       <ul>
-        {/* {weatherData.date.getDay()} */}
         <li>
           {" "}
           <FormattedDate date={props.data.date}></FormattedDate>
@@ -21,7 +20,7 @@ export default function WeatherInfo(props) {
           <div className="d-flex">
             <div className="float-left">
               {" "}
-              <WeatherIcon code={props.data.icon}></WeatherIcon>
+              <WeatherIcon size={52} code={props.data.icon}></WeatherIcon>
             </div>
 
             <div className="float-left">
