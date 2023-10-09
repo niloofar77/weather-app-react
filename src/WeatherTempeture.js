@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import "./WeatherTempeture.css";
 export default function WeatherTempeture(props) {
   function showFahrenheit(event) {
     event.preventDefault();
@@ -14,7 +15,7 @@ export default function WeatherTempeture(props) {
     <div className="WeatherTempeture">
       <span className="tempeture"> {Math.round(props.celsius)} </span>
       <span className="unit">
-        c
+        °C
         {/* <a href="/" onClick={showFahrenheit}>
             F
           </a> */}
